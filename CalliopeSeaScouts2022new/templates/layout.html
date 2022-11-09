@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+        <link href="/static/images/Calliope_logo.png" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+ 
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <a href="/"><img class="navbar-brand" src="../static/images/Calliope_logo.png"></a>
+                <h1 class="navbar-text">Kia ora, welcome</h1>
+                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                About us
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/whatWeAreAbout">What we are about</a></li>
+                                <li><a class="dropdown-item" href="/news">News</a></li>
+                                <li><a class="dropdown-item" href="/history">History</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/calendar">Calendar</a></li>
+                        <li class="nav-item dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Support us
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/supportUsVolunteer">Volunteer</a></li>
+                                <li><a class="dropdown-item" href="/supportUsJoin">Join us</a></li>
+                                <li><a class="dropdown-item" href="/hallHire">Hall hire</a></li>
+                                <li><a class="dropdown-item" href="https://givealittle.co.nz/cause/s-o-s-save-our-ship" target="_blank">Donate</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container-fluid py-5 text-center">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="link footerLinks pt-5 pb-3 small">
+                <div class="row mx-auto">
+                    <div class="col">
+                        <ul>
+                            <li><h3>Contact us</h3></li>
+                            <li><!--<img src="email.png" alt="" class="icon">--><a href="mailto:calliope@group.scouts.nz">calliope@group.scouts.nz</a></li>
+                            <li><!--<img src="facebook.png" alt="" class="icon">--><a href="https://www.facebook.com/groups/1640024176065135">Facebook</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li><h3>Support us</h3></li>
+                            <li><a href="supportUsJ.html">Youth application</a></li>
+                            <li><a href="supportUsV.html">Leader application</a></li>
+                            <li><a href="supportUsD.html">Donation</a></li>
+                            <li><a href="hallHire.html">Hall hire</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li><h3>Information</h3></li>
+                            <li><a href="aboutUs.html">History</a></li>
+                            <li><a href="uniform.html">Uniform</a></li>
+                            <li><a href="https://members.scouts.org.nz/Resources/All-Resources">Resources</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col shipLocation ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.5050582220397!2d174.80146421529074!3d-36.830378479942354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d37dab4edf2d9%3A0xe133883327617926!2sCalliope%20Sea%20Scout%20Group!5e0!3m2!1sen!2snz!4v1612234435836!5m2!1sen!2snz" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+        </footer>
+
+    </body>
+
+</html>

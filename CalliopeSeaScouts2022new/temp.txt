@@ -1,0 +1,7 @@
+venv\Scripts\activate.bat
+
+
+
+
+for debug mode, type in console
+set FLASK_ENV=development

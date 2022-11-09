@@ -1,0 +1,285 @@
+/* CSS variables for color*/
+:root {
+	--primary: #5F249F;
+	--primarylight:#d943c7; /*darker = #a852ce*/
+	--dark: #252129;
+	--medium: #787878c2;
+	--light: #f3f3f3;
+	--shadow: 0 2px 5px rgba(104, 104, 104, 0.8);
+	--background: #fff;
+}
+
+a {
+	color: var(--primarylight);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--primary);
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+main {
+	padding: 0 !important;
+	min-height: 30rem;
+}
+img {
+    max-width: 100%;
+} 
+
+button {
+	border: none;
+}
+
+li {
+	list-style: none;
+}
+
+.grey {
+	background-color: var(--light);
+}
+
+.container h1 {
+	text-align: center;
+}
+
+nav {
+	position: sticky !important;
+	background-color: var(--light);
+}
+
+.nav-item a, .nav-item button {
+	color: var(--medium) !important;
+	font-size: 1.5rem;
+	background: linear-gradient(0deg, var(--primary), var(--primary)) no-repeat right bottom / 0 var(--bg-h);
+	transition: background-size 250ms;
+	--bg-h: .5rem;
+	margin-left: -.1rem;
+	padding: .5rem;
+}
+
+.nav-item a:hover, .nav-item button:hover {
+	background-size: 100% var(--bg-h);
+  	background-position-x: left;
+	background-color: transparent;
+}
+
+.nav-item ul {
+	background-color: var(--light);
+	padding-bottom: 0 !important;
+}
+.nav-item li a {
+	font-size: 1rem;
+	margin: 0;
+}
+img.navbar-brand{
+	max-width: 9rem;
+}
+
+
+/*
+nav li a {
+	font-size: 1.5rem;
+    padding: 2rem;
+    border-bottom: 6px solid var(--dark);
+    padding-bottom: .5rem;
+    transition: all .6s ease;
+}
+
+nav li a:hover {
+	color: var(--dark);
+	border-bottom: 6px solid var(--primary);
+}
+*/
+
+
+footer {
+	background-color: var(--dark);
+}
+
+.link a {
+	color: var(--light);
+	text-decoration: none;
+
+	background: linear-gradient(0deg, var(--primarylight), var(--primarylight)) no-repeat right bottom / 0 var(--bg-h);
+	transition: background-size 350ms;
+	--bg-h: 2px;
+	padding-bottom: 2px;
+}
+
+.link a:hover {
+	color: var(--light);
+	background-size: 100% var(--bg-h);
+  	background-position-x: left;
+}
+
+.footerLinks {
+	color: var(--light);
+	list-style: none;
+}
+
+.footerLinks h3 {
+	border-bottom: 3px solid var(--light);
+}
+
+.footerLinks .row {
+	max-width: 80%;
+}
+
+
+.row h1 {
+	margin: 3rem 0;
+}
+
+.in_between_content {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.content_within {
+	margin: 2rem 0;
+}
+
+.middle_30 {
+	max-width: 30%;
+	margin: auto;
+}
+
+.container_60 {
+	max-width: 60%;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
+.call_to_action {
+	position: absolute;
+    float: right;
+    bottom: 15rem;
+    right: 6rem;
+}
+
+
+.portfolio-experiment, .scene {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-display: flex;
+	-webkit-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .portfolio-experiment a {
+	color: white;
+	padding: 0.7em calc(0.7em * 1.2);
+	display: inline-block;
+	border: 3px solid transparent;
+	position: relative;
+	cursor: pointer;
+	letter-spacing: 0.07em;
+  }
+  .portfolio-experiment a .text {
+	transform: translate3d(0, 0.3em, 0);
+	display: block;
+	transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+  .portfolio-experiment a:after {
+	position: absolute;
+	content: "";
+	bottom: -3px;
+	left: calc(0.7em * 1.2);
+	right: calc(0.7em * 1.2);
+	height: 6px;
+	background: var(--primary);
+	transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+	transform-origin: left;
+  }
+  .portfolio-experiment .line {
+	position: absolute;
+	background: var(--primarylight);
+  }
+  .portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
+	width: 6px;
+	bottom: -3px;
+	top: -3px;
+	transform: scale3d(1, 0, 1);
+  }
+  .portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
+	height: 6px;
+	left: -3px;
+	right: -3px;
+	transform: scale3d(0, 1, 1);
+  }
+  .portfolio-experiment .line.-right {
+	right: -3px;
+	transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+	transform-origin: top;
+  }
+  .portfolio-experiment .line.-top {
+	top: -3px;
+	transition: transform 0.08s linear 0.43s;
+	transform-origin: left;
+  }
+  .portfolio-experiment .line.-left {
+	left: -3px;
+	transition: transform 0.08s linear 0.51s;
+	transform-origin: bottom;
+  }
+  .portfolio-experiment .line.-bottom {
+	bottom: -3px;
+	transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+	transform-origin: right;
+  }
+  .portfolio-experiment a:hover .text,
+  .portfolio-experiment a:active .text {
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+  .portfolio-experiment a:hover:after,
+  .portfolio-experiment a:active:after {
+	transform: scale3d(0, 1, 1);
+	right: -3px;
+	left: -3px;
+	transform-origin: right;
+	transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  }
+  .portfolio-experiment a:hover .line,
+  .portfolio-experiment a:active .line {
+	transform: scale3d(1, 1, 1);
+  }
+  .portfolio-experiment a:hover .line.-right,
+  .portfolio-experiment a:active .line.-right {
+	transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+	transform-origin: bottom;
+  }
+  .portfolio-experiment a:hover .line.-top,
+  .portfolio-experiment a:active .line.-top {
+	transition: transform 0.08s linear 0.4s;
+	transform-origin: right;
+  }
+  .portfolio-experiment a:hover .line.-left,
+  .portfolio-experiment a:active .line.-left {
+	transition: transform 0.08s linear 0.48s;
+	transform-origin: top;
+  }
+  .portfolio-experiment a:hover .line.-bottom,
+  .portfolio-experiment a:active .line.-bottom {
+	transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+	transform-origin: left;
+  }
